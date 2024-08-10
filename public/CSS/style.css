@@ -1,0 +1,400 @@
+:root {
+  --main-light-bg-color: rgb(253, 253, 115);
+  --main-dark-bg-color: rgb(93, 186, 240);
+  --main-text-color: #2c3e50;
+  --main-padding: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+* {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+}
+
+.container {
+  background-color: rgba(53, 53, 53, 0.548);
+}
+
+.main {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+.navigation {
+  background-color: rgba(51, 50, 50, 0.979);
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  z-index: 3;
+}
+
+.navigation > div {
+  margin: 0px 80px;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+}
+
+.service__positionChange {
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+}
+
+.bar {
+  border: none;
+  background-color: white;
+  border-radius: 2px;
+  height: 3px;
+  width: 25px;
+  margin: 5px 20px;
+}
+
+.menu__bar-open #bar1 {
+  transform: rotate(305deg);
+}
+
+.menu__bar-open #bar3 {
+  transform: rotate(60deg);
+}
+
+.menu__bar-open #bar2 {
+  display: none;
+}
+
+.menu__bar-open .bar {
+  margin: 0px;
+}
+
+.menu__bar-open {
+  margin: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu__mainContainer {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bowlby One SC', sans-serif;
+  font-weight: 500;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  scale: 0.98;
+  transition: all ease-in-out 0.1s;
+}
+
+.menu:hover .bar {
+  background-color: rgb(102, 102, 102);
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.service {
+  color: rgb(238, 237, 237);
+  font-size: 1.02rem;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.service:hover {
+  color: var(--main-light-bg-color);
+}
+
+.home--page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  margin: 0px 150px;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/img/backgroundImg.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.summary h3 {
+  color: var(--main-dark-bg-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+.summary p {
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 1000;
+  font-size: 4rem;
+}
+
+.summary span {
+  color: var(--main-dark-bg-color);
+}
+
+.summary h4 {
+  margin: 20px 0px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.home__page-btn {
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 15px 25px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.home__page-btn:hover {
+  scale: 1.02;
+  transition: all ease-in-out 0.3s;
+}
+
+.resume--btn {
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.myWork--btn {
+  color: rgb(7, 7, 7);
+  border: none;
+  background-color: var(--main-dark-bg-color);
+}
+
+.connecting--paltform {
+  background-color: black;
+  border-radius: 0px 30px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  position: absolute;
+  left: 0px;
+  top: 30%;
+  padding: 30px 10px;
+  transition: all ease-in-out 0.5s;
+}
+
+.icons {
+  fill: currentColor;
+  color: white;
+  width: 100%;
+  height: 50px;
+}
+
+.icons:hover {
+  scale: 1.1;
+  transition: all ease-out 0.4s;
+}
+
+/* skills page */
+.skills {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allSkills {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  /* background-color: #23272b; */
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.skill:hover {
+  background-color: #1b1b1b;
+  padding: 8px;
+  transition: all ease-in-out 0.2s;
+}
+
+/* project Page */
+#allProjects {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project--container {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.project img {
+  width: 260px;
+  border-radius: 20px;
+}
+
+.project {
+  padding: 20px;
+  border-radius: 20px 20px 10px 10px;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(46, 45, 45, 0.582),
+    rgba(103, 103, 131, 0.534)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project p,
+i {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.git--work {
+  position: relative;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  left: 100px;
+  bottom: 170px;
+}
+
+.git--work use {
+  transform: translate(6px, 6px);
+}
+.git--work:hover {
+  scale: 1.1;
+  transition: all ease-in-out 0.2s;
+}
+
+/* contact page */
+.connect {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact {
+  background: linear-gradient(#4e4e4e, #1b1b1b);
+  padding: 30px 20px;
+  border-radius: 30px;
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  width: 90%;
+}
+
+.inputs h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.input label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.input input,
+textarea {
+  border-radius: 5px;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  padding: 8px;
+  background-color: rgb(255, 249, 220);
+}
+
+#msg {
+  height: 200px;
+}
+
+.input-btn {
+  background-color: rgb(39, 39, 39);
+  border: none;
+  border-radius: 5px;
+  padding: 7px 15px;
+  font-weight: 900;
+}
+
+.input label {
+  margin: 10px 0px;
+}
+
+.git__Profile img {
+  width: 600px;
+  margin: 50px;
+}
